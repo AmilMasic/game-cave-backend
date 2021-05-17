@@ -7,7 +7,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.string :genre
       t.string :description
       t.string :platform
-      t.integer :publisher_id
+      t.references :publisher
 
       t.timestamps
     end

@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_171523) do
     t.integer "publisher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["publisher_id"], name: "index_games_on_publisher_id"
   end
 
   create_table "publishers", force: :cascade do |t|

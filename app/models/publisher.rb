@@ -1,6 +1,6 @@
 class Publisher < ApplicationRecord
-  has_many: games
+  has_many :games
 
-  validates name:, presence: true
+  # validates :name, presence: true
 
 end

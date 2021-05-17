@@ -1,7 +1,2 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+publisher = Publisher.create(name:'Ubisoft', established: 1986, gamestore: 'UPlay')
+game = Game.create(title: 'Assassins Creed Valhalla', release_date: DateTime.new(2020, 10, 10), completed: false, genre: 'Action-Adventure RPG', description: "AC game that is happening in 8th Centurt England and Norway, during the viking invasions. Playing as a vikinger that gets into contact with Assassins. Templars killed the vikings family which gives the Viking and Assassins a common motiv", platform: 'PC', publisher_id: publisher.id)

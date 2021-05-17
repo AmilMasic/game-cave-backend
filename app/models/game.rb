@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-  belongs_to: publisher
+  belongs_to :publisher
 
-  validates :title, presence: true
+  # validates :title, presence: true
 end
