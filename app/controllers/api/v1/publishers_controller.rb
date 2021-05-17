@@ -13,12 +13,14 @@ class API::V1::PublishersController < ApplicationController
       render json: { error: 'Error creating publisher.'}
   end
 
-  def new
-
+  def show
+    @publisher = Publisher.find(params[:id])
+    render json: @publisher
   end
 
-  def show
-
+  def destroy
+    @publisher = Publisher.find(params[:id])
+    @publisher.destroy
   end
 
   private
