@@ -1,3 +1,5 @@
 class PublisherSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :established, :gamestore
+
+  has_many :games
 end
