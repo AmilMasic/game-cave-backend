@@ -1,4 +1,4 @@
-class API::V1::PublishersController < ApplicationController
+class Api::V1::PublishersController < ApplicationController
 
   def index
     @publishers = Publisher.all
@@ -11,6 +11,7 @@ class API::V1::PublishersController < ApplicationController
       render json: @publisher
     else
       render json: { error: 'Error creating publisher.'}
+    end
   end
 
   def show

@@ -1,4 +1,4 @@
-class API::V1::GamesController < ApplicationController
+class Api::V1::GamesController < ApplicationController
 
   def index
     @games = Game.all
@@ -11,6 +11,7 @@ class API::V1::GamesController < ApplicationController
       render json: @game
     else
       render json: { error: 'Error creating game.'}
+    end
   end
 
   def show
