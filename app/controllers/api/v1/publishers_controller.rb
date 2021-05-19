@@ -6,6 +6,7 @@ class Api::V1::PublishersController < ApplicationController
   end
 
   def create
+    binding.pry
     @publisher = Publisher.new(publisher_params)
     if @publisher.save
       render json: @publisher
@@ -27,6 +28,6 @@ class Api::V1::PublishersController < ApplicationController
   private
 
   def publisher_params
-    params.require(publisher).permit(name, established, gamestore)
+    params.require(:publisher).permit(:name, :established, :gamestore)
   end
 end
