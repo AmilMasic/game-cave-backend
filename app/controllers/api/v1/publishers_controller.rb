@@ -6,7 +6,6 @@ class Api::V1::PublishersController < ApplicationController
   end
 
   def create
-    binding.pry
     @publisher = Publisher.new(publisher_params)
     if @publisher.save
       render json: @publisher
