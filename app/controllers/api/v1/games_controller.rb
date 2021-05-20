@@ -8,8 +8,9 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-
-    @game = Game.new(game_params)
+    
+    # @game = Game.new(game_params)
+    @game = @publisher.games.new(game_params)
     if @game.save
       render json: @publisher
     else
