@@ -8,7 +8,7 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-    
+
     # @game = Game.new(game_params)
     @game = @publisher.games.new(game_params)
     if @game.save
@@ -25,7 +25,9 @@ class Api::V1::GamesController < ApplicationController
 
   def destroy
     @game = Game.find(params[:id])
+    @publisher = Publisher.find(@game.publisher_id)
     @game.destroy
+    render json: @publisher
   end
 
   private
